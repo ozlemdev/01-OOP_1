@@ -14,7 +14,7 @@ const exampleObject = {
 console.log(exampleObject.propertyName);
 console.log(exampleObject.methodName());
  
-/*---------------------------------------------*/
+/*---------------------------------------------*
 
 const Car = {
   brand: "Ford",
@@ -44,3 +44,24 @@ console.log(Car["details"]["engineSize"]);
 console.log(Car["startEngine"]());
 
 /* -------------------------------------------------- */
+//? "THIS" KEYWORD
+
+const Car = {
+  brand: "Ford",
+  model: "Mustang",
+  year: 1967,
+  isAutoGear: true,
+  colors: ["white", "red"],
+  details: {
+    color1: "red",
+    color2: "white",
+    engineSize: 4900,
+  },
+  startEngine: function () {
+    return "Motor çalıştı";
+  },
+  getDetails: function () {
+    return this;
+  },
+};
+console.log(Car.getDetails());
