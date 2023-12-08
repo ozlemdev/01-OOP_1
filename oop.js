@@ -43,7 +43,7 @@ console.log(Car.details["engineSize"]);
 console.log(Car["details"]["engineSize"]);
 console.log(Car["startEngine"]());
 
-/* -------------------------------------------------- */
+/* -------------------------------------------------- 
 //? "THIS" KEYWORD
 
 const Car = {
@@ -66,8 +66,28 @@ const Car = {
     return this.startEngine();
   },
   arrowFunc: () => {
-    return this;
+    //?Arrow functions is globalScope.(Not working this keyword in here)
+    //return this;
+    return this.brand;
   },
 };
 //console.log(Car.getDetails());
 console.log(Car.arrowFunc());
+
+/* -------------------------------------------------- */
+//? ARRAY DESTURING
+
+const testArray = ["value0", "value1", "value2", "value3"];
+
+const var0 = testArray[0];
+const var1 = testArray[1];
+
+//? sıralama aönemli
+
+const [firstItem, secondItem] = testArray;
+console.log(firstItem, secondItem);
+//? SpreadOperator:
+const [first, second, ...others] = testArray;
+console.log(first, second, others);
+
+/* -------------------------------------------------- */
