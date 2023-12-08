@@ -79,15 +79,20 @@ console.log(Car.arrowFunc());
 
 const testArray = ["value0", "value1", "value2", "value3"];
 
-const var0 = testArray[0];
-const var1 = testArray[1];
+//const var0 = testArray[0];
+//  const var1 = testArray[1];
 
 //? sıralama aönemli
 
-const [firstItem, secondItem] = testArray;
-console.log(firstItem, secondItem);
-//? SpreadOperator:
-const [first, second, ...others] = testArray;
-console.log(first, second, others);
+//const [firstItem, secondItem] = testArray;
+//console.log(firstItem, secondItem);
+//? SpreadOperator (en sonda olmak zorunda )
+//const [first, second, ...others] = testArray;
+//console.log(first, second, others);
+
+//const [...arr] = testArray;
+//console.log(arr);
+
+/* -------------------------------------------------- */
 
 /* -------------------------------------------------- */
