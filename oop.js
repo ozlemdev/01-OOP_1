@@ -61,7 +61,13 @@ const Car = {
     return "Motor çalıştı";
   },
   getDetails: function () {
+    //return this;
+    //return this.brand + " " + this.model + " " + this.year;
+    return this.startEngine();
+  },
+  arrowFunc: () => {
     return this;
   },
 };
-console.log(Car.getDetails());
+//console.log(Car.getDetails());
+console.log(Car.arrowFunc());
