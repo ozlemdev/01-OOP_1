@@ -31,9 +31,16 @@ const Car = {
     return "Motor çalıştı";
   },
 };
-console.log(Car.brand);
-console.log(Car.colors);
-console.log(Car.colors[0]);
-console.log(Car.details);
-console.log(Car.details.engineSize);
-console.log(Car.startEngine());
+//console.log(Car.brand);
+//console.log(Car.colors);
+//console.log(Car.colors[0]);
+//console.log(Car.details);
+//console.log(Car.details.engineSize);
+//console.log(Car.startEngine());
+
+console.log(Car["brand"]);
+console.log(Car.details["engineSize"]);
+console.log(Car["details"]["engineSize"]);
+console.log(Car["startEngine"]());
+
+/* -------------------------------------------------- */
