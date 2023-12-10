@@ -74,7 +74,7 @@ const Car = {
 //console.log(Car.getDetails());
 console.log(Car.arrowFunc());
 
-/* -------------------------------------------------- */
+/* -------------------------------------------------- *
 //? ARRAY DESTURING
 
 const testArray = ["value0", "value1", "value2", "value3"];
@@ -86,13 +86,48 @@ const testArray = ["value0", "value1", "value2", "value3"];
 
 //const [firstItem, secondItem] = testArray;
 //console.log(firstItem, secondItem);
-//? SpreadOperator (en sonda olmak zorunda )
+//? RestOperator (toparlayıcı)(en sonda olmak zorunda )
 //const [first, second, ...others] = testArray;
 //console.log(first, second, others);
 
 //const [...arr] = testArray;
 //console.log(arr);
 
+//? SpreadOperatör (Dağıtıcı):
+const newArr = [...testArray, "new-value", "new value2"];
+console.log(newArr);
 /* -------------------------------------------------- */
+//? OBJECT DESTRUCTURING
 
+const Car = {
+  brand: "Ford",
+  model: "Mustang",
+  year: 1967,
+  isAutoGear: true,
+  colors: ["white", "red"],
+  details: {
+    color1: "red",
+    color2: "white",
+    engineSize: 4900,
+  },
+  startEngine: function () {
+    return "Motor çalıştı";
+  },
+};
+//Rest:
+
+//const { year, model, brand, ...otherItems } = Car;
+//console.log(year, model, brand);
+//console.log(otherItems);
+
+const { year: modelYear, model: newName, brand } = Car;
+console.log(modelYear, newName, brand);
+console.log(Car); // orjinal değişmiyor.
+
+// Spread:
+const newObj = {
+  ...Car,
+  newKey: "new-value",
+};
+console.log(newObj);
 /* -------------------------------------------------- */
