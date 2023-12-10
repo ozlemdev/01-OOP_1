@@ -130,4 +130,29 @@ const newObj = {
   newKey: "new-value",
 };
 console.log(newObj);
+
+// Object to JSON:
+//const json = JSON.stringify(newObj);
+//console.log(typeof json.json);
+
+const json = JSON.stringify(Car);
+console.log(typeof json.json);
+
+// JSON to Object
+const newObj2 = JSON.parse(json);
+console.log(typeof newObj2, newObj2);
+
+// Object to Array:
+//const arr = [...Car]; hata verir 'car is not itareble'
+
+//const arr = [...Object.entries(Car)];
+//console.log(arr);
+
+const arr = Object.entries(Car);
+console.log(arr);
+const arr2 = Object.values(Car);
+console.log(arr2);
+const arr3 = Object.keys(Car);
+console.log(arr3);
+
 /* -------------------------------------------------- */
